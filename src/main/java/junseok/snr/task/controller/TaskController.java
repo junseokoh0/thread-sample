@@ -13,9 +13,8 @@ public class TaskController {
 
     @GetMapping("/task")
     public void task() throws InterruptedException {
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 102; i++) {
             taskService.task();
-            Thread.sleep(50);
         }
     }
 }

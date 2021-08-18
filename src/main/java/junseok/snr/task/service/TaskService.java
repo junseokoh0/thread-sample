@@ -17,8 +17,8 @@ public class TaskService {
 
     @Async
     public void task() throws InterruptedException {
-        Thread.sleep(1000);
         StringBuffer sb = new StringBuffer();
+        Thread.sleep(1);
         sb.append(Thread.currentThread().getName()).append("\t")
                 .append("CorePoolSize : ").append(task.getCorePoolSize()).append("\t")
                 .append("PoolSize : ").append(task.getPoolSize()).append("\t")

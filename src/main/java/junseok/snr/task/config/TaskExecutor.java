@@ -12,11 +12,12 @@ public class TaskExecutor {
     @Bean("task")
     public ThreadPoolTaskExecutor task() {
         ThreadPoolTaskExecutor taskExecutor = new ThreadPoolTaskExecutor();
-        taskExecutor.setCorePoolSize(3);
-        taskExecutor.setMaxPoolSize(16);
-        taskExecutor.setQueueCapacity(20);
+        taskExecutor.setCorePoolSize(16);
+        taskExecutor.setMaxPoolSize(34);
+        taskExecutor.setQueueCapacity(80);
         taskExecutor.setRejectedExecutionHandler((r, executor) -> {
             System.out.println("REJECT???:");
+//            executor.execute(r);
         });
         taskExecutor.initialize();
         return taskExecutor;
